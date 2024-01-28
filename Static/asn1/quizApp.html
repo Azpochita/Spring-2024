@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quizApp.css">
+    <title>Interactive Quiz</title>
+</head>
+
+<body>
+    <script src="quizLogic.js"></script>
+    <div class="quiz-container">
+        <h1 class="title">Interactive Quiz</h1>
+
+        <div class="question-container">
+            <p class="question">Who wrote the play "Romeo and Juliet"?</p>
+            <ul class="choices">
+                <li>A. William Shakespeare</li>
+                <li>B. Charles Dickens</li>
+                <li>C. Jane Austen</li>
+                <li>D. Mark Twain</li>
+            </ul>
+        </div>
+
+        <div class="navigation-container">
+            <button class="btn" id="backBtn">Back</button>
+            <button class="btn" id="nextBtn">Next</button>
+            <button class="btn" id="submitBtn">Submit</button>
+        </div>
+
+        <div class="results-container" id="resultsContainer">
+            <p>Your Score: <span id="userScore">0</span></p>
+            <p>Correct Answers: <span id="correctAnswers">0</span></p>
+        </div>
+    </div>
+</body>
+
+</html>
