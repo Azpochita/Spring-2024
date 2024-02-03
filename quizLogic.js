@@ -54,12 +54,16 @@ document.addEventListener("DOMContentLoaded", function () {
         choicesList.innerHTML = "";
 
         // Display choices
-        currentQuestion.choices.forEach((choice, index) => {
+        for (let index = 0; index < currentQuestion.choices.length; index++) {
+            const choice = currentQuestion.choices[index];
             const listItem = document.createElement("li");
-            listItem.textContent = `${String.fromCharCode(65 + index)}. ${choice}`;
-            listItem.addEventListener("click", () => selectAnswer(index));
+            listItem.textContent = String.fromCharCode(65 + index) + ". " + choice;
+            listItem.addEventListener("click", function () {
+                selectAnswer(index);
+            });
             choicesList.appendChild(listItem);
-        });
+        }
+    
 
         // Highlight the user's answer if already selected
         highlightUserAnswer();
